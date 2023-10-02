@@ -1,0 +1,28 @@
+{{template "partials/header" .}}
+
+<main class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">{{.Title}} - List</h1>
+    </div>
+    <div class="container">
+        <form method="post" action="/jobboards">
+            <div class="mb-3">
+                <label for="inputTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="inputTitle" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="inputLocation" class="form-label">Location</label>
+                <input type="text" class="form-control" id="inputLocation" name="location">
+            </div>
+            <div class="mb-3">
+                <label for="inputJobType" class="form-label">Job Type</label>
+                <select class=""form-control" id="inputJobType" name="jobtype">
+                    <option value="fulltime">FullTime</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</main>
+
+{{template "partials/footer" .}}
